@@ -8,6 +8,12 @@
 <!DOCTYPE html>
 <%
     String equipe = request.getParameter("equipe");
+    String grupo[][] = {
+        {"Liga da Justiça","Super Homem", "Mulher Maravilha", "Batman", "Flash"},
+        {"Novos Titãs","Mutano", "Robin", "Estrelada", "Cyborg"}
+    };
+    int n = 0;
+    String msg = " ";
 %>
 <html>
     <head>
@@ -16,30 +22,30 @@
         <title>Equipe</title>
     </head>
     <body>
-        <h1>Equipe</h1>
+        <ul>
         <%
           if(equipe.equals("lj")){  
+              msg += "<h1>Equipe " + grupo[n][0]+ "</h1>";
+          for(int x = 1; x < grupo[n].length; x++){
+              msg += "<li>" + grupo[n][x]+"</li>";
+          }
+          
         %>
-        <ul>
-            <li>Arqueiro Verde</li>
-            <li>Batman</li>
-            <li>Flash</li>
-            <li>Super Homem</li>
-            <li>Mulher Maravilha</li>
-            <li>Aquaman</li>
-        </ul>
+        
+            
+        
         <%
             }else if(equipe.equals("nt")){
-        %>
-            <ul>
-                <li>Ravena</li>
-                <li>Estelar</li>
-                <li>Robin</li>
-                <li>Mutano</li>
-                <li>Cyborg</li>
-            </ul>
-        <%
+
+                n = 1;
+                msg += "<h1>Equipe " + grupo[n][0]+ "</h1>";
+                for(int x = 1; x < grupo[n].length; x++){
+                    msg += "<li>" + grupo[n][x]+"</li>";
+                }
+
             }
+            out.print(msg);
         %>
+        </ul>
     </body>
 </html>
