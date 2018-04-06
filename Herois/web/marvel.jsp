@@ -7,34 +7,36 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-    String equipe = request.getParameter("equipeo");
+    String equipe = request.getParameter("equipe");
 %>
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Equipe</title>
     </head>
     <body>
+        <h1>Equipe</h1>
         <%
-          if(equipe == "lj"){  
+          if(equipe.equals("vg")){  
         %>
         <ul>
-            <li>Arqueiro Verde</li>
-            <li>Batman</li>
-            <li>Flash</li>
-            <li>Super Homem</li>
-            <li>Mulher Maravilha</li>
-            <li>Aquaman</li>
+            <li>Thor</li>
+            <li>Homem de Ferro</li>
+            <li>Hulk</li>
+            <li>Capitão América</li>
         </ul>
         <%
-            }else if(equipe == "nt"){
+            }else if(equipe.equals("xm")){
         %>
             <ul>
-                <li>Ravena</li>
-                <li>Estelar</li>
-                <li>Robin</li>
-                <li>Mutano</li>
-                <li>Cyborg</li>
+                <li>Xavier</li>
+                <li>Jean Grey</li>
+                <li>Scott Summer</li>
+                <li>Noturno</li>
+                <li>Tempestade</li>
+                <li>Vampira</li>
+                <li>Magneto</li>
             </ul>
         <%
             }
